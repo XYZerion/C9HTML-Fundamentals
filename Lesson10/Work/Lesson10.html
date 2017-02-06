@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<title>Lesson 10 - Creating Forms</title>
-	</head>
-	<body>
+	<meta charset="utf-8">
+	<title>Lesson 10 - Creating Forms</title>
+</head>
 
-		<h1>Creating Forms</h1>
+<body>
 
-		<form method="post" action="form.aspx">
-			<p>
-				<label>Customer Name: <input type="text" id="customerName" name="customerName" maxlength="10"></label>
-			</p>
-			<fieldset>
-				<legend>Pizza Size</legend>
-				<p><label><input type="radio" name="size" value="small"> Small (10 Inch) </label></p>
-				<p><label><input type="radio" name="size" value="medium"> Medium (12 Inch) </label></p>
-				<p><label><input type="radio" name="size" value="large"> Large (14 Inch) </label></p>
-			</fieldset>
-			<fieldset>
-				<legend>Pizza Toppings</legend>
-				<p><label><input type="checkbox" name="toppings" value="bacon"> Bacon </label></p>
-				<p><label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni </label></p>
-				<p><label><input type="checkbox" name="toppings" value="sausage"> Sausage </label></p>
-				<p><label><input type="checkbox" name="toppings" value="mushroom"> Mushroom </label></p>
-			</fieldset>
+	<h1>Creating Forms</h1>
 
-			<p>Crust
-				<select>
+	<form method="post" action="form.aspx">
+		<p>
+			<label>Customer Name: <input type="text" id="customerName" name="customerName" maxlength="10" value="What is your name?"></label>
+		</p>
+		<fieldset>
+			<legend>Pizza Size</legend>
+			<p><label><input type="radio" name="size" value="small"> Small (10 Inch) </label></p>
+			<p><label><input type="radio" name="size" value="medium" checked> Medium (12 Inch) </label></p>
+			<p><label><input type="radio" name="size" value="large"> Large (14 Inch) </label></p>
+		</fieldset>
+		<fieldset>
+			<legend>Pizza Toppings</legend>
+			<p><label><input type="checkbox" name="toppings" value="bacon"> Bacon </label></p>
+			<p><label><input type="checkbox" name="toppings" value="pepperoni" checked> Pepperoni </label></p>
+			<p><label><input type="checkbox" name="toppings" value="sausage"> Sausage </label></p>
+			<p><label><input type="checkbox" name="toppings" value="mushroom"> Mushroom </label></p>
+		</fieldset>
+
+		<p>Crust
+			<select name="crust" multiple>
 					<option value="c1">Normal</option>
-					<option value="c2">Chicago Deep Dish (+$2)</option>
+					<option value="c2" selected>Chicago Deep Dish (+$2)</option>
 					<option value="c3">New York Thin</option>
 				</select>
+		</p>
 
-			</p>
+		<p>
+			<label for="comments">Delivery Instructions:</label>
+			<textarea name="comments" cols="50" rows="5" maxlength="1000">How do we get to your house?</textarea>
 
-		</form>
+		</p>
 
-	</body>
+		<p>
+			<input type="submit" value="Continue to step 2">
+		</p>
+
+		<p>
+			<input type="reset" value="Reset Values">
+		</p>
+
+
+	</form>
+
+</body>
 </html>
 
 
